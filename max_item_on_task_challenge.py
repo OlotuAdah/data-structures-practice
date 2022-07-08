@@ -20,6 +20,12 @@ class Stack:
                 self.max_stack.append(data)
                 return self
 
+    def pop(self):
+        del self.max_stack[-1]
+        rm_item = self.main_stack[-1]
+        del self.main_stack[-1]
+        return rm_item
+
     def get_max_item_on_stack(self):
         return self.max_stack[-1]
 
