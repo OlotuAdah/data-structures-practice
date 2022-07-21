@@ -6,7 +6,7 @@ class Stack:
         self.max_stack = []
 
     def push(self, data):
-        if len(self.main_stack) < 1:  # stack is empty
+        if len(self.main_stack) < 1:  # stack is empty, append data to both main and max stack
             self.main_stack.append(data)
             self.max_stack.append(data)
             return self
@@ -26,6 +26,7 @@ class Stack:
         del self.main_stack[-1]
         return rm_item
 
+    # O(1) running time complexity
     def get_max_item_on_stack(self):
         return self.max_stack[-1]
 
